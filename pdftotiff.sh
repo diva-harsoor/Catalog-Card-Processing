@@ -8,7 +8,7 @@ GS="C:/Program Files/gs/gs9.20/bin/gswin64c.exe"
 # Remove space from Accession Files directory name
 mv "$ROOT/Accession Files" $ROOT/Accession_Files
 
-# Iterate through the Acc. No. directories and remove spaces from there names
+# Iterate through the Acc. No. directories and remove spaces from their names so that the commands below don't throw errors.
 for f in $ROOT/Accession_Files/*
 do
     NEWFNAME=`echo $f | sed "s/\s/_/g"`
